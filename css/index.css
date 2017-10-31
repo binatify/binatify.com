@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Stylish Portfolio (https://startbootstrap.com/template-overviews/stylish-portfolio)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/master/LICENSE)
- */
-
 /* Global Styles */
 
 html, body {
@@ -12,7 +6,8 @@ html, body {
 }
 
 body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: -apple-system, SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  color: #333;
 }
 
 .text-vertical-center {
@@ -27,7 +22,6 @@ body {
 }
 
 /* Custom Button Styles */
-
 .btn-dark {
   color: #fff;
   border: none;
@@ -39,19 +33,6 @@ body {
   color: #fff;
   background-color: rgba(0, 0, 0, .7);
 }
-
-.btn-light {
-  color: #333;
-  border: none;
-  border-radius: 0;
-  background-color: rgb(255, 255, 255);
-}
-
-.btn-light:hover, .btn-light:focus, .btn-light:active {
-  color: #333;
-  background-color: rgba(255, 255, 255, .8);
-}
-
 
 /* Custom Horizontal Rule */
 
@@ -82,30 +63,22 @@ hr.small {
 
 
 /* Services */
-
 .services {
-  padding: 50px 0;
+  margin: 50px 0px;
 }
 
 .service-item {
   margin-bottom: 30px;
 }
 
-
-/* Callout */
-
-.callout {
-  display: table;
-  width: 100%;
-  height: 400px;
-  color: #fff;
-  background: url(../img/callout.jpg) no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.service-item:hover {
+  color: #000;
+  cursor: pointer;
 }
 
+.service-item .fa-stack-1x {
+  color: #fff;
+}
 
 /* Portfolio */
 
@@ -115,6 +88,7 @@ hr.small {
 
 .portfolio-item {
   margin-bottom: 30px;
+  border: 1px solid #333;
 }
 
 .img-portfolio {
@@ -124,35 +98,6 @@ hr.small {
 .img-portfolio:hover {
   opacity: .8;
 }
-
-
-/* Call to Action */
-
-.call-to-action {
-  padding: 50px 0;
-}
-
-.call-to-action .btn {
-  margin: 10px;
-}
-
-
-/* Map */
-
-.map {
-  height: 500px;
-}
-
-@media(max-width:768px) {
-  .map {
-    height: 75%;
-  }
-}
-
-.map iframe {
-  pointer-events: none;
-}
-
 
 /* Footer */
 
@@ -169,18 +114,16 @@ footer {
   padding: 15px 20px;
 }
 
-
-
 /* override */
 
-.bg-primary {
-  background-color: rgba(0, 0, 0, 0.53)!important;
-}
-
 .text-primary {
-  color: #000 !important;
+  color: #333 !important;
 }
 
 .list-unstyled a, .list-inline-item i {
-  color: #000 !important;
+  color: #333 !important;
+}
+
+.list-unstyled a:hover, .list-inline-item i:hover {
+  color: rgba(0, 0, 0, 1) !important;
 }
