@@ -15,6 +15,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: 禾木教育
+collections:
+- episodes
+- series
+- guides
+- posts
+
 plugins:
   - jekyll-assets
 assets:
