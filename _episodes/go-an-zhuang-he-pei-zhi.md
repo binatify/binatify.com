@@ -11,7 +11,6 @@ datetime: 2018-01-14
 time: "7:25"
 comments: true
 tags:
- - installation
  - GOPATH
 ---
 

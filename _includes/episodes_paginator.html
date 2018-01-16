@@ -5,7 +5,6 @@
         <div class="card-body">
           <h1> 视频列表</h1>
           <hr>
-
           {% assign offItem = page.page | minus: 1 | times: 5 %}
           {% assign episodes = site.episodes | sort: 'datetime' | reverse %}
           {% for episode in episodes limit:5 offset:offItem %}
@@ -84,7 +83,7 @@
           <hr>
 
           <h5><strong>分类</strong></h5>
-          <div><a class="text-default" href="/episodes/tagged/xxxx">VSCode</a></div>
+          {% include episode_tags.html %}
         </div>
       </div>
     </div>

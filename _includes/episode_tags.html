@@ -1,0 +1,9 @@
+{% assign tags = site.episodes | map: 'tags' %}
+{% assign flatTags=[] %}
+{% for groupTags in tags %}
+  {% assign flatTags = flatTags | concat:groupTags %}
+{% endfor %}
+
+{% for tag in flatTags | uniq %}
+  <div><a class="text-default" href="/episodes/tagged/{{tag}}.html">{{tag}}</a></div>
+{% endfor %}
