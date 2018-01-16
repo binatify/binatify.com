@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-md-2">
           <div class="bs-sidebar hidden-print" role="complementary">
-            <ul class="nav bs-sidenav">
+            <ul class="nav bs-sidenav" id="content-link__list">
             </ul>
             <hr>
             <h5 class="text-muted">观看最新视频</h5>
@@ -33,7 +33,9 @@
               <h2>{{page.title}}</h2>
               <p class="lead">{{page.description}}</p>
               <hr>
-              {{ content }}
+              <div class="content-link__container jsAppModule" data-target="#content-link__list" data-module="ContentLink">
+                {{ content }}
+              </div>
             </div>
           </div>
         </div>
