@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    {% include head.html %}
+    {% css application %}
+  </head>
+  <body>
+    {% include header.html %}
+    {% include player.html %}
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+            </ul>
+            <hr>
+            <h5 class="text-muted">观看最新视频</h5>
+            <a class="next-episode-card" href="">
+              <img class="img-fluid" src="">
+              <small>xxx</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <div class="card">
+            <div class="card-body episode-body">
+              <h2>{{page.title}}</h2>
+              <p class="lead">{{page.description}}</p>
+              <hr>
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>

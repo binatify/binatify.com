@@ -80,75 +80,39 @@ layout: default
   </div>
 </div>
 
-
 <div class="section pt-5 pb-5">
   <div class="container">
     <h2 class="text-center">最新视频</h2>
-
-    <div class="episode" id="episode_2">
-      <a href="https://www.bilibili.com/video/av18319744/" target="_blank">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="episode-thumbnail">
-              <img class="img-fluid" src="http://p2lg64wh6.bkt.clouddn.com/lecture-02-cover.png">
-              <span class="episode-length">7:29</span>
+    {% assign episodes = site.episodes | sort: 'datetime' | reverse %}
+    {% for episode in episodes limit:5 %}
+      <div class="episode" id="episode_{{episode.id}}">
+        <a href="{{episode.url}}" target="_blank">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="episode-thumbnail">
+                <img class="img-fluid" src="http://p2lg64wh6.bkt.clouddn.com/{{episode.cover}}">
+                <span class="episode-length">{{episode.time}}</span>
+              </div>
+            </div>
+            <div class="col">
+              <h3 style="margin-top:0px">
+                {{episode.title}}
+              </h3>
+              <div class="text-muted"><small>
+                  <span class="badge badge-primary">New!</span> ·
+                  <strong>#{{episode.number}}</strong>
+                  ·
+                  <span>{{episode.datetime}}</span>
+                </small></div>
+                <div class="text-muted episode-description">
+                  {{episode.preview}}
+                </div>
             </div>
           </div>
-
-          <div class="col">
-            <h3 style="margin-top:0px">
-              [Go零基础编程入门教程-02] Go开发利器：VSCode
-            </h3>
-            <div class="text-muted"><small>
-                <span class="badge badge-primary">New!</span> ·
-                <strong>#2</strong>
-                ·
-                <time datetime="2018-01-15 00:59" data-local="time" title="2018-01-15 00:59" data-localized="">2018-01-15</time>
-              <!-- · <i class="fa fa-heart"></i> 4 -->
-              </small></div>
-              <div class="text-muted episode-description">
-                1. Go开发利器 VSCode 安装介绍。<br>
-                2. 如何将 code 命令添加到系统 PATH 中去。<br>
-                3. 使用 VSCode 编写代码示例： 错误提醒，自动引包，代码格式化，代码跳转。<br>
-              </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <hr>
-
-    <div class="episode" id="episode_1">
-      <a href="https://www.bilibili.com/video/av18288497/" target="_blank">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="episode-thumbnail">
-              <img class="img-fluid" src="http://p2lg64wh6.bkt.clouddn.com/lecture-01-cover.png">
-              <span class="episode-length">7:25</span>
-            </div>
-          </div>
-
-          <div class="col">
-            <h3 style="margin-top:0px">
-              [Go零基础编程入门教程-01] Go 安装和配置
-            </h3>
-            <div class="text-muted"><small>
-                <span class="badge badge-primary">New!</span> ·
-                <strong>#1</strong>
-                ·
-                <time datetime="2018-01-14 09:15" data-local="time" title="2018-01-14 09:15" data-localized="">2018-01-14</time>
-              <!-- · <i class="fa fa-heart"></i> 4 -->
-              </small></div>
-              <div class="text-muted episode-description">
-                1. Go 安装示例<br>
-                2. GOPATH 配置示例<br>
-                3. 编写第一个 Go 程序<br>
-                4. 标准 Go 命令示范： go run, go build, go install<br>
-              </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <hr>
+        </a>
+      </div>
+      <hr>
+    {% endfor %}
 
     <div class="text-center mt-5">
       <a class="more-episodes plain-link" href="/episodes?page=2">查看更多课程 <i class="fa fa-caret-down"></i></a><p></p>

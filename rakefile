@@ -1,0 +1,39 @@
+require "rubygems"
+require "bundler/setup"
+require "stringex"
+
+desc "new episode with title, eg: rake new_episode title=TITLE"
+task :new_episode do
+  title = ENV['title']
+
+  unless title
+   print "episode title: "
+   title = STDIN.gets.chomp
+  end
+
+  filename = "_episodes/#{title.to_url}.md"
+
+  if File.exist?(filename)
+    abort("#{filename} already exists!")
+  end
+
+  puts "Creating new post: #{filename}"
+  open(filename, 'w') do |episode|
+    episode.puts "---"
+    episode.puts "layout: episode"
+    episode.puts "number: "
+    episode.puts "layout: episode"
+    episode.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+    episode.puts "section: "
+    episode.puts "cover: "
+    episode.puts "video: "
+    episode.puts "description: "
+    episode.puts "preview: "
+    episode.puts "datetime: 2018-"
+    episode.puts "time: "
+    episode.puts "comments: true"
+    episode.puts "tags:"
+    episode.puts " -"
+    episode.puts "---"
+  end
+end

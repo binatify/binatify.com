@@ -16,11 +16,9 @@
 
 title: 禾木教育
 collections:
-- episodes
-- series
-- guides
-- posts
-
+  episodes:
+    output: true
+    
 plugins:
   - jekyll-assets
 assets:
