@@ -1,0 +1,92 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="card">
+        <div class="card-body">
+          <h1> 视频列表</h1>
+          <hr>
+
+          {% assign offItem = page.page | minus: 1 | times: 5 %}
+          {% assign episodes = site.episodes | sort: 'datetime' | reverse %}
+          {% for episode in episodes limit:5 offset:offItem %}
+            <div class="episode" id="episode_{{episode.id}}">
+              <a href="{{episode.url}}" target="_blank">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="episode-thumbnail">
+                      <img class="img-fluid" src="{{episode.cover}}">
+                      <span class="episode-length">{{episode.time}}</span>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <h3 style="margin-top:0px">
+                      {{episode.title}}
+                    </h3>
+                    <div class="text-muted">
+                      <small>
+                        {% if episode.isnew %}
+                          <span class="badge badge-primary">New!</span> ·
+                        {% endif %}
+                        <strong>#{{episode.number}}</strong>
+                        ·
+                        <span>{{episode.datetime}}</span>
+                      </small>
+                    </div>
+                      <div class="text-muted episode-description">
+                        {{episode.preview}}
+                      </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <hr>
+          {% endfor %}
+
+          {% assign totalPage = episodes | size | minus: 1 | divided_by: 5 | plus: 1 %}
+          <div class="text-center">
+            <nav>
+              <ul class="pagination">
+                {% if page.page == 1 %}
+                <li class="page-item disabled"><span class="page-link">←</span></li>
+                {% else %}
+                  <li class="page-item"><a class="page-link" rel="next" href="/episodes/page-{{page.page | minus : 1}}">←</a></li>
+                {% endif %}
+                {% assign i = 1 %}
+                {% for i in (1..totalPage) %}
+                  {% if page.page == i %}
+                    <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+                  {% else %}
+                    <li class="page-item"><a class="page-link" href="/episodes/page-{{ i }}">{{ i }}</a></li>
+                  {% endif %}
+                {% endfor %}
+                {% if page.page < totalPage %}
+                  <li class="page-item"><a class="page-link" rel="next" href="/episodes/page-{{page.page | plus: 1}}">→</a></li>
+                {% else %}
+                  <li class="page-item disabled"><span class="page-link">→</span></li>
+                {% endif %}
+               </ul>
+             </nav>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5><strong>搜素</strong></h5>
+          <form class="episode_search" id="episode_search" action="/episodes" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+            <div class="form-group">
+              <input placeholder="输入关键字...." class="form-control" type="search">
+            </div>
+            <input type="submit" name="commit" value="搜索" class="btn btn-outline-primary btn-block" data-disable-with="Search">
+          </form>
+          <hr>
+
+          <h5><strong>分类</strong></h5>
+          <div><a class="text-default" href="/episodes/tagged/xxxx">VSCode</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

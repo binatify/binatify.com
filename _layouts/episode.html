@@ -16,7 +16,7 @@
             <hr>
             <h5 class="text-muted">观看最新视频</h5>
             {% assign episodes = site.episodes | sort: 'datetime' | reverse %}
-            {% for episode in episodes limit:2 %}
+            {% for episode in episodes limit: 2 %}
               {% if episode.id != page.id %}
                 <a class="next-episode-card" href={{episode.id}}>
                   <img class="img-fluid" src={{episode.cover}}>

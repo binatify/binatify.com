@@ -8,30 +8,37 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
 
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item "><a class="nav-link" href="/episodes">课程</a></li>
-        <li class="nav-item "><a class="nav-link" href="/series">集合</a></li>
-          <li class="nav-item dropdown ">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/guides">
-              指南 <b class="caret"></b>
-            </a>
-            <div class="dropdown-menu">
+        <li class="nav-item">
+          <a class="nav-link" href="/episodes">视频课程</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/series">集合</a>
+        </li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/guides">
+            指南 <b class="caret"></b>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href=""></a>
+            <a class="dropdown-item" href=""></a>
+            <a class="dropdown-item" href=""></a>
+            <div class="dropdown-divider"></div>
               <a class="dropdown-item" href=""></a>
-              <a class="dropdown-item" href=""></a>
-              <a class="dropdown-item" href=""></a>
-              <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href=""></a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item text-center" href="/guides">查看所有教程</a>
-            </div>
-          </li>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-center" href="/guides">查看所有教程</a>
+          </div>
+        </li>
       </ul>
 
       <form class="ml-md-auto mr-3 form-inline" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
         <div class="form-group">
-          <div class="easy-autocomplete"><input type="text" name="q" id="q" class="form-control search-input" placeholder="搜索你想学的内容?" style="min-width: 16em" autocomplete="off"><div class="easy-autocomplete-container" id="eac-container-q"><ul></ul></div></div>
+          <div class="easy-autocomplete">
+            <input type="text" name="q" id="q" class="form-control search-input" placeholder="搜索你想学的内容?" style="min-width: 16em" autocomplete="off">
+            <div class="easy-autocomplete-container" id="eac-container-q"><ul></ul></div>
+          </div>
         </div>
       </form>
-      
+
       <ul class="navbar-nav"></ul>
     </div>
   </div>
