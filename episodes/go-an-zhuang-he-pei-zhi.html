@@ -8,6 +8,7 @@
 <link type="text/css" rel="stylesheet" href="/assets/plugin-4ad436a4e3f8a3cc9279d16d852bced40b4268698a59f87af0eda285869022cb.css" integrity="sha384-dTNSIVUCh8Qd7d4Iau8J0xHdBAIRa+GjHoDibVXfyK4v7jsf63269sw6/XjKkMDu" crossorigin="anonymous">
 <script type="text/javascript" src="/assets/plugin-d7ca6fe0d6c899a2d794972a33a2a3d509ad0a81844d070e4350d0db1eca41cd.js" integrity="sha384-mAwV+ZpEYGrvdYOZNf4Tt7bhcGZSXddK9+FPpSe3vMv69ZSwYXSCjQ6nQ6MYhSjY" crossorigin="anonymous"></script>
 
+    <link type="text/css" rel="stylesheet" href="/assets/application-20cc909eafc5df0f8208d28c71379d704924f8e6129c5e441d8c213637e492c3.css" integrity="sha384-VhzIDqDZofFEhWBvXw1p1/ho/E9oGA+d2T3qEAKbR4rSWWCJU8Ql49rHKhnmE+RW" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -49,7 +50,106 @@
   </div>
 </nav>
 
-    <p>sss</p>
+    <div class="episode-video-wrapper mb-5">
+  <div class="video-player">
+    <div class="embed-responsive embed-responsive-video">
+      <iframe class="embed-responsive-item" src="https://v.qq.com/iframe/player.html?vid=n0533un9wte&tiny=0&auto=0" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+  </div>
+</div>
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+            </ul>
+            <hr>
+            <h5 class="text-muted">观看最新视频</h5>
+            <a class="next-episode-card" href="">
+              <img class="img-fluid" src="">
+              <small>xxx</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <div class="card">
+            <div class="card-body episode-body">
+              <h2>[Go零基础编程入门教程-01] Go 安装和配置</h2>
+              <p class="lead">通过视频学习 Go 安装以及编写自己的第一个 Go 程序</p>
+              <hr>
+              <h3 id="写在前面">写在前面</h3>
+
+<ul>
+  <li>教学 Go 版本 1.9.x</li>
+  <li>教学使用 <code class="highlighter-rouge">GOPATH</code> 为 <code class="highlighter-rouge">~/importgo</code></li>
+</ul>
+
+<h3 id="下载并安装">下载并安装</h3>
+
+<ul>
+  <li>下载安装对应版本 https://golang.org/dl/</li>
+  <li>查看 go 安装目录 <code class="highlighter-rouge">/usr/local/go</code> (Windows 下默认安装到 <code class="highlighter-rouge">c:\Go</code>)</li>
+  <li>运行 <code class="highlighter-rouge">go version</code> 命令检查是否安装正确</li>
+</ul>
+
+<blockquote>
+  <blockquote>
+    <p>推荐大家使用二进制默认安装方式</p>
+  </blockquote>
+</blockquote>
+
+<h3 id="项目环境变量">项目环境变量</h3>
+
+<p>本课程命名为 <code class="highlighter-rouge">importgo</code>, 故添加一个 <code class="highlighter-rouge">IMPORTGOROOT</code> 的环境变量进行所有的代码开发和演示，具体配置如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vi ~/.profile
+
+export IMPORTGOROOT=$HOME/importgo
+export GOPATH=$IMPORTGOROOT # 覆盖 GOPATH 环境变为 importgo
+export PATH=$IMPORTGOROOT/bin:$PATH #
+</code></pre></div></div>
+
+<p>当我们配置完毕后，可以执行 <code class="highlighter-rouge">source ~/.profile</code> 更新系统环境变量。</p>
+
+<h3 id="编写我的第一个-go-程序">编写我的第一个 Go 程序</h3>
+
+<p>首先需要在 GOPATH 文件夹下创建一个 <code class="highlighter-rouge">src</code> 目录用于存放我们的源代码。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir -p $GOPATH/src
+</code></pre></div></div>
+
+<p>然后我们在 src 目录下面新建 <code class="highlighter-rouge">hello/hello.go</code> 的文件，内容如下：</p>
+
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="s">"fmt"</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"hello, world"</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
+
+<p>我们使用 <code class="highlighter-rouge">go run hello.go</code> 来运行程序，输出为：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hello, world
+</code></pre></div></div>
+
+<h3 id="go-命令详解">Go 命令详解</h3>
+
+<ul>
+  <li>go run: 运行 Go 源码程序</li>
+  <li>go build: 编译 Go 源码</li>
+  <li>go install: Go 源码编译并打包到 $GOPATH/bin 目录</li>
+</ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer role="contentinfo">
   <div class="container mt-5">

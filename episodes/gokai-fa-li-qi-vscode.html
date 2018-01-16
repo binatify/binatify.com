@@ -8,6 +8,7 @@
 <link type="text/css" rel="stylesheet" href="/assets/plugin-4ad436a4e3f8a3cc9279d16d852bced40b4268698a59f87af0eda285869022cb.css" integrity="sha384-dTNSIVUCh8Qd7d4Iau8J0xHdBAIRa+GjHoDibVXfyK4v7jsf63269sw6/XjKkMDu" crossorigin="anonymous">
 <script type="text/javascript" src="/assets/plugin-d7ca6fe0d6c899a2d794972a33a2a3d509ad0a81844d070e4350d0db1eca41cd.js" integrity="sha384-mAwV+ZpEYGrvdYOZNf4Tt7bhcGZSXddK9+FPpSe3vMv69ZSwYXSCjQ6nQ6MYhSjY" crossorigin="anonymous"></script>
 
+    <link type="text/css" rel="stylesheet" href="/assets/application-20cc909eafc5df0f8208d28c71379d704924f8e6129c5e441d8c213637e492c3.css" integrity="sha384-VhzIDqDZofFEhWBvXw1p1/ho/E9oGA+d2T3qEAKbR4rSWWCJU8Ql49rHKhnmE+RW" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -49,7 +50,103 @@
   </div>
 </nav>
 
-    <p>sss</p>
+    <div class="episode-video-wrapper mb-5">
+  <div class="video-player">
+    <div class="embed-responsive embed-responsive-video">
+      <iframe class="embed-responsive-item" src="https://v.qq.com/iframe/player.html?vid=u0533arf177&tiny=0&auto=1" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+  </div>
+</div>
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+            </ul>
+            <hr>
+            <h5 class="text-muted">观看最新视频</h5>
+            <a class="next-episode-card" href="">
+              <img class="img-fluid" src="">
+              <small>xxx</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <div class="card">
+            <div class="card-body episode-body">
+              <h2>[Go零基础编程入门教程-02] Go开发利器：VSCode</h2>
+              <p class="lead">让你一键爱上 VSCode 这一款编辑器。</p>
+              <hr>
+              <h3 id="为什么选择-vscode">为什么选择 VSCode?</h3>
+
+<ul>
+  <li>微软官方出品，更新迭代快</li>
+  <li>强大的插件：代码跳转，自动格式化，错误检测等</li>
+</ul>
+
+<h3 id="下载安装">下载安装</h3>
+
+<ul>
+  <li>登录 vscode 官网: https://code.visualstudio.com</li>
+  <li>
+    <p>根据操作系统选择对应包下载</p>
+
+    <p><img src="https://songjiayang.gitbooks.io/go-basic-courses/content/pics/install-vscode.png" alt="shell command" /></p>
+  </li>
+</ul>
+
+<h3 id="将-code-命令添加到系统-path-中">将 <code class="highlighter-rouge">code</code> 命令添加到系统 PATH 中</h3>
+
+<blockquote>
+  <p>效果：在终端输入 <code class="highlighter-rouge">code &lt;filename/foldername&gt;</code> 就能用 vscode 打开文件或文件夹</p>
+</blockquote>
+
+<ul>
+  <li>以 mac 为例：在 vscode 中使用快捷键 <code class="highlighter-rouge">command + shif + p</code>,</li>
+  <li>
+    <p>输入 shell command，选择 <code class="highlighter-rouge">Shell Command:Install 'code' command in PATH</code>，如下图：</p>
+
+    <p><img src="https://songjiayang.gitbooks.io/go-basic-courses/content/pics/shell-command.png" alt="shell command" /></p>
+  </li>
+</ul>
+
+<h3 id="安装-go-插件">安装 Go 插件</h3>
+
+<ul>
+  <li>登录 vscode 官网 <code class="highlighter-rouge">Extensions</code>模块：https://marketplace.visualstudio.com/VSCode</li>
+  <li>搜索 <code class="highlighter-rouge">go</code> 插件</li>
+  <li>推荐安装 <code class="highlighter-rouge">lukehoban</code> 的 go 插件： https://marketplace.visualstudio.com/items?itemName=lukehoban.Go</li>
+  <li>
+    <p>点击 <code class="highlighter-rouge">install</code> 后就打开 vscode 界面，进行安装</p>
+
+    <p><img src="https://songjiayang.gitbooks.io/go-basic-courses/content/pics/go-extension.png" alt="shell command" /></p>
+  </li>
+</ul>
+
+<h3 id="go-开发相关配置">Go 开发相关配置</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"files.autoSave": "onFocusChange",
+"editor.formatOnSave": true,
+"go.gopath":"${workspaceRoot}:/Users/jinxue/golib", // 当前工作空间${wordspaceRoot}加上系统 GOPATH 目录
+"go.goroot": "/usr/local/Cellar/go/1.9/libexec", // go 的安装目录
+"go.formatOnSave": true, //在保存代码时自动格式化代码
+"go.formatTool": "goimports", //使用 goimports 工具进行代码格式化，或者使用 goreturns 和 gofmt
+"go.buildOnSave": true, //在保存代码时自动编译代码
+"go.lintOnSave": true, //在保存代码时自动检查代码可以优化的地方，并给出建议
+"go.vetOnSave": false, //在保存代码时自动检查潜在的错误
+"go.coverOnSave": false, //在保存代码时执行测试，并显示测试覆盖率
+"go.useCodeSnippetsOnFunctionSuggest": true, //使用代码片段作为提示
+"go.gocodeAutoBuild": false //代码自动编译构建
+</code></pre></div></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer role="contentinfo">
   <div class="container mt-5">
