@@ -10,8 +10,7 @@ preview: '1. Go 安装示例<br>2. GOPATH 配置示例<br>3. 编写第一个 Go 
 datetime: 2018-01-14
 time: "7:25"
 comments: true
-tags:
- - GOPATH
+taglist: GOPATH
 ---
 
 ### 写在前面

@@ -12,9 +12,7 @@ datetime: 2018-01-15
 time: "7:29"
 isnew: true
 comments: true
-tags:
- - VSCode
- - 开发工具
+taglist: VSCode
 ---
 
 ### 为什么选择 VSCode?

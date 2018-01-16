@@ -5,8 +5,15 @@
         <div class="card-body">
           <h1> 视频列表</h1>
           <hr>
+
           {% assign offItem = page.page | minus: 1 | times: 5 %}
-          {% assign episodes = site.episodes | sort: 'datetime' | reverse %}
+
+          {% if page.tag | size > 0%}
+            {% assign episodes = site.episodes |  where: 'taglist', page.tag | sort: 'datetime' | reverse |%}
+          {% else %}
+            {% assign episodes = site.episodes | sort: 'datetime' | reverse %}
+          {% endif %}
+
           {% for episode in episodes limit:5 offset:offItem %}
             <div class="episode" id="episode_{{episode.id}}">
               <a href="{{episode.url}}" target="_blank">

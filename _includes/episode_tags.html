@@ -1,6 +1,7 @@
-{% assign tags = site.episodes | map: 'tags' %}
+{% assign tags = site.episodes | map: 'taglist' %}
 {% assign flatTags=[] %}
-{% for groupTags in tags %}
+{% for taglist in tags %}
+  {% assign groupTags = taglist | split: " " %}
   {% assign flatTags = flatTags | concat:groupTags %}
 {% endfor %}
 
