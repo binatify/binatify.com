@@ -53,7 +53,61 @@
   </div>
 </nav>
 
-    <p>sss</p>
+    <div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="card">
+        <div class="card-body">
+          <h1> 视频列表</h1>
+          <hr>
+
+          
+          
+          
+
+          
+          <div class="text-center">
+            <nav>
+              <ul class="pagination">
+                
+                  <li class="page-item"><a class="page-link" rel="next" href="/episodes/page-1">←</a></li>
+                
+                
+                
+                  
+                    <li class="page-item"><a class="page-link" href="/episodes/page-1">1</a></li>
+                  
+                
+                
+                  <li class="page-item disabled"><span class="page-link">→</span></li>
+                
+               </ul>
+             </nav>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5><strong>搜素</strong></h5>
+          <form class="episode_search" id="episode_search" action="/episodes" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+            <div class="form-group">
+              <input placeholder="输入关键字...." class="form-control" type="search">
+            </div>
+            <input type="submit" name="commit" value="搜索" class="btn btn-outline-primary btn-block" data-disable-with="Search">
+          </form>
+          <hr>
+
+          <h5><strong>分类</strong></h5>
+          <div><a class="text-default" href="/episodes/tagged/xxxx">VSCode</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <footer role="contentinfo">
   <div class="container mt-5">
