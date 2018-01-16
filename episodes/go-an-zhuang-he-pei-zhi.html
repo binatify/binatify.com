@@ -53,7 +53,7 @@
     <div class="episode-video-wrapper mb-5">
   <div class="video-player">
     <div class="embed-responsive embed-responsive-video">
-      <iframe class="embed-responsive-item" src="https://v.qq.com/iframe/player.html?vid=n0533un9wte&tiny=0&auto=1" frameborder="0" allowfullscreen="" width="100%" height="100%"></iframe>
+      <iframe class="embed-responsive-item" src="//v.qq.com/iframe/player.html?vid=n0533un9wte&tiny=0&auto=0" frameborder="0" allowfullscreen="" width="100%" height="100%"></iframe>
     </div>
   </div>
 </div>
@@ -62,7 +62,7 @@
       <div class="row">
         <div class="col-md-2">
           <div class="bs-sidebar hidden-print" role="complementary">
-            <ul class="nav bs-sidenav">
+            <ul class="nav bs-sidenav" id="content-link__list">
             </ul>
             <hr>
             <h5 class="text-muted">观看最新视频</h5>
@@ -70,7 +70,7 @@
             
               
                 <a class="next-episode-card" href=/episodes/gokai-fa-li-qi-vscode>
-                  <img class="img-fluid" src=http://p2lg64wh6.bkt.clouddn.com/lecture-02-cover.png>
+                  <img class="img-fluid" src=//p2lg64wh6.bkt.clouddn.com/lecture-02-cover.png>
                   <small>[Go零基础编程入门教程-02] Go开发利器：VSCode</small>
                 </a>
               
@@ -86,7 +86,8 @@
               <h2>[Go零基础编程入门教程-01] Go 安装和配置</h2>
               <p class="lead">通过视频学习 Go 安装以及编写自己的第一个 Go 程序</p>
               <hr>
-              <h3 id="写在前面">写在前面</h3>
+              <div class="content-link__container jsAppModule" data-target="#content-link__list" data-module="ContentLink">
+                <h3 id="写在前面">写在前面</h3>
 
 <ul>
   <li>教学 Go 版本 1.9.x</li>
@@ -151,6 +152,7 @@ export PATH=$IMPORTGOROOT/bin:$PATH #
   <li>go install: Go 源码编译并打包到 $GOPATH/bin 目录</li>
 </ul>
 
+              </div>
             </div>
           </div>
         </div>
@@ -202,6 +204,7 @@ export PATH=$IMPORTGOROOT/bin:$PATH #
     </div>
   </div>
 </footer>
+<script type="text/javascript" src="/assets/app-d061364e4f7d109393f9df0e13035b10502407d8a6d7c2e74c9f45a07a6bae8f.js" integrity="sha384-drTlJN/Q35lHlNM0Cx66vX4kEqHjYndNpYwJudk3kE5NpZqsKroiFWaCEqTAkTdO" crossorigin="anonymous"></script>
 
   </body>
 </html>
