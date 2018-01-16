@@ -90,7 +90,7 @@ layout: default
           <div class="row">
             <div class="col-sm-3">
               <div class="episode-thumbnail">
-                <img class="img-fluid" src="http://p2lg64wh6.bkt.clouddn.com/{{episode.cover}}">
+                <img class="img-fluid" src="{{episode.cover}}">
                 <span class="episode-length">{{episode.time}}</span>
               </div>
             </div>
@@ -98,12 +98,16 @@ layout: default
               <h3 style="margin-top:0px">
                 {{episode.title}}
               </h3>
-              <div class="text-muted"><small>
-                  <span class="badge badge-primary">New!</span> ·
+              <div class="text-muted">
+                <small>
+                  {% if episode.isnew %}
+                    <span class="badge badge-primary">New!</span> ·
+                  {% endif %}
                   <strong>#{{episode.number}}</strong>
                   ·
                   <span>{{episode.datetime}}</span>
-                </small></div>
+                </small>
+              </div>
                 <div class="text-muted episode-description">
                   {{episode.preview}}
                 </div>

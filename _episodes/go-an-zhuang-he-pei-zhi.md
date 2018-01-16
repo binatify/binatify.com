@@ -3,7 +3,7 @@ layout: episode
 number: 1
 title: "[Go零基础编程入门教程-01] Go 安装和配置"
 section: "Go零基础编程入门教程"
-cover: lecture-01-cover.png
+cover: http://p2lg64wh6.bkt.clouddn.com/lecture-01-cover.png
 video: https://v.qq.com/iframe/player.html?vid=n0533un9wte&tiny=0&auto=1
 description: "通过视频学习 Go 安装以及编写自己的第一个 Go 程序"
 preview: '1. Go 安装示例<br>2. GOPATH 配置示例<br>3. 编写第一个 Go 程序<br>4. 标准 Go 命令示范： go run, go build, go install<br>'

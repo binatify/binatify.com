@@ -4,12 +4,13 @@ number: 2
 layout: episode
 title: "[Go零基础编程入门教程-02] Go开发利器：VSCode"
 section: "Go零基础编程入门教程"
-cover: lecture-02-cover.png
+cover: http://p2lg64wh6.bkt.clouddn.com/lecture-02-cover.png
 video: https://v.qq.com/iframe/player.html?vid=u0533arf177&tiny=0&auto=1
 description: 让你一键爱上 VSCode 这一款编辑器。
 preview: '1. Go 开发利器 VSCode 安装介绍。<br>2. 如何将 code 命令添加到系统 PATH 里面。<br>3. 使用 VSCode 编写代码示例： 错误提醒，自动引包，代码格式化，代码跳转。<br>'
 datetime: 2018-01-15
 time: "7:29"
+isnew: true
 comments: true
 tags:
  - VSCode

@@ -7,7 +7,6 @@
   <body>
     {% include header.html %}
     {% include player.html %}
-    
     <div class="container">
       <div class="row">
         <div class="col-md-2">
@@ -16,10 +15,15 @@
             </ul>
             <hr>
             <h5 class="text-muted">观看最新视频</h5>
-            <a class="next-episode-card" href="">
-              <img class="img-fluid" src="">
-              <small>xxx</small>
-            </a>
+            {% assign episodes = site.episodes | sort: 'datetime' | reverse %}
+            {% for episode in episodes limit:2 %}
+              {% if episode.id != page.id %}
+                <a class="next-episode-card" href={{episode.id}}>
+                  <img class="img-fluid" src={{episode.cover}}>
+                  <small>{{episode.title}}</small>
+                </a>
+              {% endif %}
+            {% endfor %}
           </div>
         </div>
 
@@ -35,7 +39,6 @@
         </div>
       </div>
     </div>
-
     {% include footer.html %}
   </body>
 </html>
