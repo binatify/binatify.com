@@ -31,9 +31,9 @@ task :new_episode do
     episode.puts "preview: "
     episode.puts "datetime: 2018-"
     episode.puts "time: "
+    episode.puts "isnew: "
     episode.puts "comments: true"
-    episode.puts "tags:"
-    episode.puts " -"
+    episode.puts "taglist:"
     episode.puts "---"
   end
 end
