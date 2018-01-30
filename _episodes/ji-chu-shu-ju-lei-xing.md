@@ -12,7 +12,7 @@ datetime: 2018-01-21
 time: "11:50"
 isnew: false
 comments: true
-taglist: 基础知识
+taglist: 
 ---
 
 Go 语言中的基本数据类型包含：
