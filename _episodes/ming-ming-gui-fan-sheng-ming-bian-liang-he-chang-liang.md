@@ -10,7 +10,7 @@ description: 学习了解 Go 命名规范，掌握什么是变量，什么是常
 preview: '1. Go 标识符声明语法。<br>2. 变量声明。<br>3. 常量声明。<br>'
 datetime: 2018-01-20
 time: "8:27"
-isnew: true
+isnew: false
 comments: true
 taglist: 基础知识
 ---
