@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>禾木教育</title>
+<script src="https://buttons.github.io/buttons.js" data-turbolinks-track="reload"></script>
+<link type="text/css" rel="stylesheet" href="/assets/plugin-4ad436a4e3f8a3cc9279d16d852bced40b4268698a59f87af0eda285869022cb.css" integrity="sha384-dTNSIVUCh8Qd7d4Iau8J0xHdBAIRa+GjHoDibVXfyK4v7jsf63269sw6/XjKkMDu" crossorigin="anonymous">
+<script type="text/javascript" src="/assets/plugin-d7ca6fe0d6c899a2d794972a33a2a3d509ad0a81844d070e4350d0db1eca41cd.js" integrity="sha384-mAwV+ZpEYGrvdYOZNf4Tt7bhcGZSXddK9+FPpSe3vMv69ZSwYXSCjQ6nQ6MYhSjY" crossorigin="anonymous"></script>
+
+    <link type="text/css" rel="stylesheet" href="/assets/application-20cc909eafc5df0f8208d28c71379d704924f8e6129c5e441d8c213637e492c3.css" integrity="sha384-VhzIDqDZofFEhWBvXw1p1/ho/E9oGA+d2T3qEAKbR4rSWWCJU8Ql49rHKhnmE+RW" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"><span>禾木教育</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/episodes">视频</a>
+        </li>
+
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+            书籍 <b class="caret"></b>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://songjiayang.gitbooks.io/prometheus/details" target="_blank">Prometheus 实战</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.gitbook.com/book/songjiayang/go-basic-courses/details">Go 零基础入门教程</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item ">
+          <a class="nav-link" href="/series">集合</a>
+        </li> -->
+        <!-- <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/guides">
+            指南 <b class="caret"></b>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href=""></a>
+            <a class="dropdown-item" href=""></a>
+            <a class="dropdown-item" href=""></a>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href=""></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-center" href="/guides">查看所有教程</a>
+          </div>
+        </li> -->
+      </ul>
+
+      <!-- <form class="ml-md-auto mr-3 form-inline" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+        <div class="form-group">
+          <div class="easy-autocomplete">
+            <input type="text" name="q" id="q" class="form-control search-input" placeholder="搜索你想学的内容?" style="min-width: 16em" autocomplete="off">
+            <div class="easy-autocomplete-container" id="eac-container-q"><ul></ul></div>
+          </div>
+        </div>
+      </form> -->
+
+      <ul class="navbar-nav"></ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="episode-video-wrapper mb-5">
+  <div class="video-player">
+    <div class="embed-responsive embed-responsive-video">
+      <iframe class="embed-responsive-item" src="//v.qq.com/iframe/player.html?vid=g0537iz2c1l&tiny=0&auto=0" frameborder="0" allowfullscreen="" width="100%" height="100%"></iframe>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav" id="content-link__list">
+            </ul>
+            <hr>
+            <h5 class="text-muted">观看最新视频</h5>
+            
+            
+              
+                <a class="next-episode-card" href=/episodes/slice>
+                  <img class="img-fluid" src=//p2lg64wh6.bkt.clouddn.com/lecture-06-cover.png>
+                  <small>切片</small>
+                </a>
+              
+            
+              
+            
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <div class="card">
+            <div class="card-body episode-body">
+              <h2>数组</h2>
+              <p class="lead">学习了解 Go 数组定义，掌握数组的基本使用。</p>
+              <hr>
+              <div class="content-link__container jsAppModule" data-target="#content-link__list" data-module="ContentLink">
+                <h3 id="定义">定义</h3>
+
+<ul>
+  <li>定义：由若干相同类型的元素组成的序列</li>
+  <li>数组的长度是固定的，声明后无法改变</li>
+  <li>数组的长度是数组类型的一部分，eg：元素类型相同但是长度不同的两个数组是不同类型的</li>
+  <li>需要严格控制程序所使用内存时，数组十分有用，因为其长度固定，避免了内存二次分配操作</li>
+</ul>
+
+<h3 id="示例">示例</h3>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="s">"fmt"</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="c">// 定义长度为 5 的数组</span><span class="x">
+	</span><span class="k">var</span><span class="x"> </span><span class="n">arr1</span><span class="x"> </span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="kt">int</span><span class="x">
+	</span><span class="k">for</span><span class="x"> </span><span class="n">i</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="m">0</span><span class="p">;</span><span class="x"> </span><span class="n">i</span><span class="x"> </span><span class="o">&lt;</span><span class="x"> </span><span class="m">5</span><span class="p">;</span><span class="x"> </span><span class="n">i</span><span class="o">++</span><span class="x"> </span><span class="p">{</span><span class="x">
+		</span><span class="n">arr1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">i</span><span class="x">
+	</span><span class="p">}</span><span class="x">
+	</span><span class="n">printHelper</span><span class="p">(</span><span class="s">"arr1"</span><span class="p">,</span><span class="x"> </span><span class="n">arr1</span><span class="p">)</span><span class="x">
+
+	</span><span class="c">// 以下赋值会报类型不匹配错误，因为数组长度是数组类型的一部分</span><span class="x">
+	</span><span class="c">// arr1 = [3]int{1, 2, 3}</span><span class="x">
+	</span><span class="n">arr1</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="m">2</span><span class="p">,</span><span class="x"> </span><span class="m">3</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">,</span><span class="x"> </span><span class="m">5</span><span class="p">,</span><span class="x"> </span><span class="m">6</span><span class="p">}</span><span class="x"> </span><span class="c">// 长度和元素类型都相同，可以正确赋值</span><span class="x">
+
+	</span><span class="c">// 简写模式，在定义的同时给出了赋值</span><span class="x">
+	</span><span class="n">arr2</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="m">0</span><span class="p">,</span><span class="x"> </span><span class="m">1</span><span class="p">,</span><span class="x"> </span><span class="m">2</span><span class="p">,</span><span class="x"> </span><span class="m">3</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">}</span><span class="x">
+	</span><span class="n">printHelper</span><span class="p">(</span><span class="s">"arr2"</span><span class="p">,</span><span class="x"> </span><span class="n">arr2</span><span class="p">)</span><span class="x">
+
+	</span><span class="c">// 数组元素类型相同并且数组长度相等的情况下，数组可以进行比较</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">arr1</span><span class="x"> </span><span class="o">==</span><span class="x"> </span><span class="n">arr2</span><span class="p">)</span><span class="x">
+
+	</span><span class="c">// 也可以不显式定义数组长度，由编译器完成长度计算</span><span class="x">
+	</span><span class="k">var</span><span class="x"> </span><span class="n">arr3</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="m">0</span><span class="p">,</span><span class="x"> </span><span class="m">1</span><span class="p">,</span><span class="x"> </span><span class="m">2</span><span class="p">,</span><span class="x"> </span><span class="m">3</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">}</span><span class="x">
+	</span><span class="n">printHelper</span><span class="p">(</span><span class="s">"arr3"</span><span class="p">,</span><span class="x"> </span><span class="n">arr3</span><span class="p">)</span><span class="x">
+
+	</span><span class="c">// 定义前四个元素为默认值 0，最后一个元素为 -1</span><span class="x">
+	</span><span class="k">var</span><span class="x"> </span><span class="n">arr4</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="m">4</span><span class="o">:</span><span class="x"> </span><span class="o">-</span><span class="m">1</span><span class="p">}</span><span class="x">
+	</span><span class="n">printHelper</span><span class="p">(</span><span class="s">"arr4"</span><span class="p">,</span><span class="x"> </span><span class="n">arr4</span><span class="p">)</span><span class="x">
+
+	</span><span class="c">// 多维数组</span><span class="x">
+	</span><span class="k">var</span><span class="x"> </span><span class="n">twoD</span><span class="x"> </span><span class="p">[</span><span class="m">2</span><span class="p">][</span><span class="m">3</span><span class="p">]</span><span class="kt">int</span><span class="x">
+	</span><span class="k">for</span><span class="x"> </span><span class="n">i</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="m">0</span><span class="p">;</span><span class="x"> </span><span class="n">i</span><span class="x"> </span><span class="o">&lt;</span><span class="x"> </span><span class="m">2</span><span class="p">;</span><span class="x"> </span><span class="n">i</span><span class="o">++</span><span class="x"> </span><span class="p">{</span><span class="x">
+		</span><span class="k">for</span><span class="x"> </span><span class="n">j</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="m">0</span><span class="p">;</span><span class="x"> </span><span class="n">j</span><span class="x"> </span><span class="o">&lt;</span><span class="x"> </span><span class="m">3</span><span class="p">;</span><span class="x"> </span><span class="n">j</span><span class="o">++</span><span class="x"> </span><span class="p">{</span><span class="x">
+			</span><span class="n">twoD</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">i</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">j</span><span class="x">
+		</span><span class="p">}</span><span class="x">
+	</span><span class="p">}</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"twoD: "</span><span class="p">,</span><span class="x"> </span><span class="n">twoD</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">printHelper</span><span class="p">(</span><span class="n">name</span><span class="x"> </span><span class="kt">string</span><span class="p">,</span><span class="x"> </span><span class="n">arr</span><span class="x"> </span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="kt">int</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="k">for</span><span class="x"> </span><span class="n">i</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="m">0</span><span class="p">;</span><span class="x"> </span><span class="n">i</span><span class="x"> </span><span class="o">&lt;</span><span class="x"> </span><span class="m">5</span><span class="p">;</span><span class="x"> </span><span class="n">i</span><span class="o">++</span><span class="x"> </span><span class="p">{</span><span class="x">
+		</span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"%v[%v]: %v</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="x"> </span><span class="n">name</span><span class="p">,</span><span class="x"> </span><span class="n">i</span><span class="p">,</span><span class="x"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="x">
+	</span><span class="p">}</span><span class="x">
+
+	</span><span class="c">// len 获取长度</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"len of %v: %v</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="x"> </span><span class="n">name</span><span class="p">,</span><span class="x"> </span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span><span class="x">
+
+	</span><span class="c">// cap 也可以用来获取数组长度</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"cap of %v: %v</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="x"> </span><span class="n">name</span><span class="p">,</span><span class="x"> </span><span class="nb">cap</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span><span class="x">
+
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">()</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <div><a href="/"><img class="img-fluid hidden-xs" style="max-height: 20px" src="" alt=""></a></div>
+        <br class="hidden-xs">
+        <div><small><a href="" target="_blank">© 2017-2018, binatify</a></small></div>
+      </div>
+
+      <!-- <div class="col-sm-2 col-xs-4">
+        <div><strong>教学内容</strong></div>
+        <div><a href="/series">集合</a></div>
+        <div><a href="/episodes">视频教程</a></div>
+        <div><a href="/guides">技术指南</a></div>
+      </div> -->
+
+      <!-- <div class="col-sm-2 col-xs-4">
+        <div><strong>其他</strong></div>
+        <div><a href="/blog">博客</a></div>
+        <div><a target="blank" href="https://courses.binatify.com/">合作课程</a></div>
+      </div> -->
+
+      <!-- <div class="col-sm-2 col-xs-4">
+        <div><strong>关于</strong></div>
+        <div><a href="/terms">协议</a></div>
+        <div><a href="/privacy">隐私</a></div>
+        <div><a href="/about">关于我们</a></div>
+      </div> -->
+<!--
+      <div class="col-sm-3 col-xs-12">
+        <br class="visible-xs">
+        <data data-token="" class="mj-w-data" data-apikey="1ywk" data-w-id="2l5" data-lang="en_US" data-base="https://app.mailjet.com" data-width="640" data-height="374" data-statics="statics"></data>
+        <div data-token="" class="mj-w-btn" style="color: white; padding: 0px 25px; background-color: rgb(240, 98, 43); text-align: center; vertical-align: middle; display: inline-block; border-radius: 3px; cursor: pointer;">
+          <div style="display: table; height: 45px;">
+            <div style="display: table-cell; vertical-align: middle;">
+              <div style="font-family:Ubuntu, Helvetica; display: inline-block; text-align: center; font-size: 13px; vertical-align: middle;"><b>订阅我们</b></div>
+            </div>
+          </div>
+        </div>
+        <hr class="hidden-xs">
+        <a href="" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">关注 @binatify</a>
+        <a href="" class="twitter-share-button" data-url="" data-count="horizontal" data-via="excid3" data-related="excid3:Creator of binatify">微博</a>
+      </div> -->
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="/assets/app-d061364e4f7d109393f9df0e13035b10502407d8a6d7c2e74c9f45a07a6bae8f.js" integrity="sha384-drTlJN/Q35lHlNM0Cx66vX4kEqHjYndNpYwJudk3kE5NpZqsKroiFWaCEqTAkTdO" crossorigin="anonymous"></script>
+
+  </body>
+</html>

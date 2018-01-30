@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>禾木教育</title>
+<script src="https://buttons.github.io/buttons.js" data-turbolinks-track="reload"></script>
+<link type="text/css" rel="stylesheet" href="/assets/plugin-4ad436a4e3f8a3cc9279d16d852bced40b4268698a59f87af0eda285869022cb.css" integrity="sha384-dTNSIVUCh8Qd7d4Iau8J0xHdBAIRa+GjHoDibVXfyK4v7jsf63269sw6/XjKkMDu" crossorigin="anonymous">
+<script type="text/javascript" src="/assets/plugin-d7ca6fe0d6c899a2d794972a33a2a3d509ad0a81844d070e4350d0db1eca41cd.js" integrity="sha384-mAwV+ZpEYGrvdYOZNf4Tt7bhcGZSXddK9+FPpSe3vMv69ZSwYXSCjQ6nQ6MYhSjY" crossorigin="anonymous"></script>
+
+    <link type="text/css" rel="stylesheet" href="/assets/application-20cc909eafc5df0f8208d28c71379d704924f8e6129c5e441d8c213637e492c3.css" integrity="sha384-VhzIDqDZofFEhWBvXw1p1/ho/E9oGA+d2T3qEAKbR4rSWWCJU8Ql49rHKhnmE+RW" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"><span>禾木教育</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/episodes">视频</a>
+        </li>
+
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+            书籍 <b class="caret"></b>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://songjiayang.gitbooks.io/prometheus/details" target="_blank">Prometheus 实战</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.gitbook.com/book/songjiayang/go-basic-courses/details">Go 零基础入门教程</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item ">
+          <a class="nav-link" href="/series">集合</a>
+        </li> -->
+        <!-- <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/guides">
+            指南 <b class="caret"></b>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href=""></a>
+            <a class="dropdown-item" href=""></a>
+            <a class="dropdown-item" href=""></a>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href=""></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-center" href="/guides">查看所有教程</a>
+          </div>
+        </li> -->
+      </ul>
+
+      <!-- <form class="ml-md-auto mr-3 form-inline" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+        <div class="form-group">
+          <div class="easy-autocomplete">
+            <input type="text" name="q" id="q" class="form-control search-input" placeholder="搜索你想学的内容?" style="min-width: 16em" autocomplete="off">
+            <div class="easy-autocomplete-container" id="eac-container-q"><ul></ul></div>
+          </div>
+        </div>
+      </form> -->
+
+      <ul class="navbar-nav"></ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="episode-video-wrapper mb-5">
+  <div class="video-player">
+    <div class="embed-responsive embed-responsive-video">
+      <iframe class="embed-responsive-item" src="//v.qq.com/iframe/player.html?vid=y0539dcc3bl&tiny=0&auto=0" frameborder="0" allowfullscreen="" width="100%" height="100%"></iframe>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav" id="content-link__list">
+            </ul>
+            <hr>
+            <h5 class="text-muted">观看最新视频</h5>
+            
+            
+              
+            
+              
+                <a class="next-episode-card" href=/episodes/shu-zu>
+                  <img class="img-fluid" src=//p2lg64wh6.bkt.clouddn.com/lecture-05-cover.png>
+                  <small>数组</small>
+                </a>
+              
+            
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <div class="card">
+            <div class="card-body episode-body">
+              <h2>切片</h2>
+              <p class="lead">学习了解 Go 切片定义，掌握切片的基本使用。</p>
+              <hr>
+              <div class="content-link__container jsAppModule" data-target="#content-link__list" data-module="ContentLink">
+                <h3 id="切片组成要素">切片组成要素</h3>
+
+<ul>
+  <li>指针：指向底层数组</li>
+  <li>长度：切片中元素的长度，不能大于容量</li>
+  <li>容量：指针所指向的底层数组的总容量</li>
+</ul>
+
+<h3 id="常见初始化方式">常见初始化方式</h3>
+
+<ul>
+  <li>使用 <code class="highlighter-rouge">make</code> 初始化</li>
+</ul>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">slice</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span><span class="x"> </span><span class="m">5</span><span class="p">)</span><span class="x">     </span><span class="c">// 初始化长度和容量都为 5 的切片</span><span class="x">
+</span><span class="n">slice</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span><span class="x"> </span><span class="m">5</span><span class="p">,</span><span class="x"> </span><span class="m">10</span><span class="p">)</span><span class="x"> </span><span class="c">// 初始化长度为 5, 容量为 10 的切片</span><span class="x">
+</span></code></pre></div></div>
+
+<ul>
+  <li>使用简短定义</li>
+</ul>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">slice</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="x"> </span><span class="m">2</span><span class="p">,</span><span class="x"> </span><span class="m">3</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">,</span><span class="x"> </span><span class="m">5</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
+
+<ul>
+  <li>使用数组来初始化切片</li>
+</ul>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arr</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="x"> </span><span class="m">2</span><span class="p">,</span><span class="x"> </span><span class="m">3</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">,</span><span class="x"> </span><span class="m">5</span><span class="p">}</span><span class="x">
+</span><span class="n">slice</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">arr</span><span class="p">[</span><span class="m">0</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="x"> </span><span class="c">// 左闭右开区间，最终切片为 [1,2,3]</span><span class="x">
+</span></code></pre></div></div>
+
+<ul>
+  <li>使用切片来初始化切片</li>
+</ul>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sliceA</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="x"> </span><span class="m">2</span><span class="p">,</span><span class="x"> </span><span class="m">3</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">,</span><span class="x"> </span><span class="m">5</span><span class="p">}</span><span class="x">
+</span><span class="n">sliceB</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">sliceA</span><span class="p">[</span><span class="m">0</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="x"> </span><span class="c">// 左闭右开区间，sliceB 最终为 [1,2,3]</span><span class="x">
+</span></code></pre></div></div>
+
+<h3 id="长度和容量">长度和容量</h3>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="x">
+	</span><span class="s">"fmt"</span><span class="x">
+</span><span class="p">)</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">slice</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="x"> </span><span class="m">2</span><span class="p">,</span><span class="x"> </span><span class="m">3</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">,</span><span class="x"> </span><span class="m">5</span><span class="p">}</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"len: "</span><span class="p">,</span><span class="x"> </span><span class="nb">len</span><span class="p">(</span><span class="n">slice</span><span class="p">))</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"cap: "</span><span class="p">,</span><span class="x"> </span><span class="nb">cap</span><span class="p">(</span><span class="n">slice</span><span class="p">))</span><span class="x">
+
+	</span><span class="c">//改变切片长度</span><span class="x">
+	</span><span class="n">slice</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="nb">append</span><span class="p">(</span><span class="n">slice</span><span class="p">,</span><span class="x"> </span><span class="m">6</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"after append operation: "</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"len: "</span><span class="p">,</span><span class="x"> </span><span class="nb">len</span><span class="p">(</span><span class="n">slice</span><span class="p">))</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"cap: "</span><span class="p">,</span><span class="x"> </span><span class="nb">cap</span><span class="p">(</span><span class="n">slice</span><span class="p">))</span><span class="x"> </span><span class="c">//注意，底层数组容量不够时，会重新分配数组空间，通常为两倍</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
+
+<p>以上代码，预期输出如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>len:  5
+cap:  5
+after append operation:
+len:  6
+cap:  12
+</code></pre></div></div>
+
+<h3 id="注意点">注意点</h3>
+
+<ul>
+  <li>多个切片共享一个底层数组的情况</li>
+</ul>
+
+<blockquote>
+  <p>对底层数组的修改，将影响上层多个切片的值</p>
+</blockquote>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="x">
+	</span><span class="s">"fmt"</span><span class="x">
+</span><span class="p">)</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">slice</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="x"> </span><span class="m">2</span><span class="p">,</span><span class="x"> </span><span class="m">3</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">,</span><span class="x"> </span><span class="m">5</span><span class="p">}</span><span class="x">
+	</span><span class="n">newSlice</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">slice</span><span class="p">[</span><span class="m">0</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"before modifying underlying array:"</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"slice: "</span><span class="p">,</span><span class="x"> </span><span class="n">slice</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"newSlice: "</span><span class="p">,</span><span class="x"> </span><span class="n">newSlice</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">()</span><span class="x">
+
+	</span><span class="n">newSlice</span><span class="p">[</span><span class="m">0</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="m">6</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"after modifying underlying array:"</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"slice: "</span><span class="p">,</span><span class="x"> </span><span class="n">slice</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"newSlice: "</span><span class="p">,</span><span class="x"> </span><span class="n">newSlice</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
+
+<p>以上代码预期输出如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>before modify underlying array:
+slice:  [1 2 3 4 5]
+newSlice:  [1 2 3]
+
+after modify underlying array:
+slice:  [6 2 3 4 5]
+newSlice:  [6 2 3]
+</code></pre></div></div>
+
+<ul>
+  <li>使用 <code class="highlighter-rouge">copy</code> 方法可以避免共享同一个底层数组</li>
+</ul>
+
+<blockquote>
+  <p>示例代码如下：</p>
+</blockquote>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="x">
+	</span><span class="s">"fmt"</span><span class="x">
+</span><span class="p">)</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">slice</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="x"> </span><span class="m">2</span><span class="p">,</span><span class="x"> </span><span class="m">3</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">,</span><span class="x"> </span><span class="m">5</span><span class="p">}</span><span class="x">
+	</span><span class="n">newSlice</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span><span class="x"> </span><span class="nb">len</span><span class="p">(</span><span class="n">slice</span><span class="p">))</span><span class="x">
+	</span><span class="nb">copy</span><span class="p">(</span><span class="n">newSlice</span><span class="p">,</span><span class="x"> </span><span class="n">slice</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"before modifying underlying array:"</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"slice: "</span><span class="p">,</span><span class="x"> </span><span class="n">slice</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"newSlice: "</span><span class="p">,</span><span class="x"> </span><span class="n">newSlice</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">()</span><span class="x">
+
+	</span><span class="n">newSlice</span><span class="p">[</span><span class="m">0</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="m">6</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"after modifying underlying array:"</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"slice: "</span><span class="p">,</span><span class="x"> </span><span class="n">slice</span><span class="p">)</span><span class="x">
+	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"newSlice: "</span><span class="p">,</span><span class="x"> </span><span class="n">newSlice</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
+
+<p>以上代码预期输出如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>before modifying underlying array:
+slice:  [1 2 3 4 5]
+newSlice:  [1 2 3 4 5]
+
+after modifying underlying array:
+slice:  [1 2 3 4 5]
+newSlice:  [6 2 3 4 5]
+</code></pre></div></div>
+
+<h3 id="小练习">小练习</h3>
+
+<p>如何使用 <code class="highlighter-rouge">copy</code> 函数进行切片部分拷贝？</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">// 假设切片 slice 如下:</span><span class="x">
+</span><span class="n">slice</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="x"> </span><span class="m">2</span><span class="p">,</span><span class="x"> </span><span class="m">3</span><span class="p">,</span><span class="x"> </span><span class="m">4</span><span class="p">,</span><span class="x"> </span><span class="m">5</span><span class="p">}</span><span class="x">
+
+</span><span class="c">// 如何使用 copy 创建切片 newSlice, 该切片值为 [2, 3, 4]</span><span class="x">
+</span><span class="n">newSlice</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="nb">copy</span><span class="p">(</span><span class="err">?</span><span class="p">,</span><span class="err">?</span><span class="p">)</span><span class="x">
+</span></code></pre></div></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <div><a href="/"><img class="img-fluid hidden-xs" style="max-height: 20px" src="" alt=""></a></div>
+        <br class="hidden-xs">
+        <div><small><a href="" target="_blank">© 2017-2018, binatify</a></small></div>
+      </div>
+
+      <!-- <div class="col-sm-2 col-xs-4">
+        <div><strong>教学内容</strong></div>
+        <div><a href="/series">集合</a></div>
+        <div><a href="/episodes">视频教程</a></div>
+        <div><a href="/guides">技术指南</a></div>
+      </div> -->
+
+      <!-- <div class="col-sm-2 col-xs-4">
+        <div><strong>其他</strong></div>
+        <div><a href="/blog">博客</a></div>
+        <div><a target="blank" href="https://courses.binatify.com/">合作课程</a></div>
+      </div> -->
+
+      <!-- <div class="col-sm-2 col-xs-4">
+        <div><strong>关于</strong></div>
+        <div><a href="/terms">协议</a></div>
+        <div><a href="/privacy">隐私</a></div>
+        <div><a href="/about">关于我们</a></div>
+      </div> -->
+<!--
+      <div class="col-sm-3 col-xs-12">
+        <br class="visible-xs">
+        <data data-token="" class="mj-w-data" data-apikey="1ywk" data-w-id="2l5" data-lang="en_US" data-base="https://app.mailjet.com" data-width="640" data-height="374" data-statics="statics"></data>
+        <div data-token="" class="mj-w-btn" style="color: white; padding: 0px 25px; background-color: rgb(240, 98, 43); text-align: center; vertical-align: middle; display: inline-block; border-radius: 3px; cursor: pointer;">
+          <div style="display: table; height: 45px;">
+            <div style="display: table-cell; vertical-align: middle;">
+              <div style="font-family:Ubuntu, Helvetica; display: inline-block; text-align: center; font-size: 13px; vertical-align: middle;"><b>订阅我们</b></div>
+            </div>
+          </div>
+        </div>
+        <hr class="hidden-xs">
+        <a href="" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">关注 @binatify</a>
+        <a href="" class="twitter-share-button" data-url="" data-count="horizontal" data-via="excid3" data-related="excid3:Creator of binatify">微博</a>
+      </div> -->
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="/assets/app-d061364e4f7d109393f9df0e13035b10502407d8a6d7c2e74c9f45a07a6bae8f.js" integrity="sha384-drTlJN/Q35lHlNM0Cx66vX4kEqHjYndNpYwJudk3kE5NpZqsKroiFWaCEqTAkTdO" crossorigin="anonymous"></script>
+
+  </body>
+</html>

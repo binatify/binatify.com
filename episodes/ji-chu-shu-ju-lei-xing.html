@@ -8,6 +8,7 @@
 <link type="text/css" rel="stylesheet" href="/assets/plugin-4ad436a4e3f8a3cc9279d16d852bced40b4268698a59f87af0eda285869022cb.css" integrity="sha384-dTNSIVUCh8Qd7d4Iau8J0xHdBAIRa+GjHoDibVXfyK4v7jsf63269sw6/XjKkMDu" crossorigin="anonymous">
 <script type="text/javascript" src="/assets/plugin-d7ca6fe0d6c899a2d794972a33a2a3d509ad0a81844d070e4350d0db1eca41cd.js" integrity="sha384-mAwV+ZpEYGrvdYOZNf4Tt7bhcGZSXddK9+FPpSe3vMv69ZSwYXSCjQ6nQ6MYhSjY" crossorigin="anonymous"></script>
 
+    <link type="text/css" rel="stylesheet" href="/assets/application-20cc909eafc5df0f8208d28c71379d704924f8e6129c5e441d8c213637e492c3.css" integrity="sha384-VhzIDqDZofFEhWBvXw1p1/ho/E9oGA+d2T3qEAKbR4rSWWCJU8Ql49rHKhnmE+RW" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -67,107 +68,160 @@
   </div>
 </nav>
 
-    <div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-9">
-      <div class="card">
-        <div class="card-body">
-          <h1> 视频列表</h1>
-          <hr>
-
-          
-
-          
-
-          
-            <div class="episode" id="episode_/episodes/go-an-zhuang-he-pei-zhi">
-              <a href="/episodes/go-an-zhuang-he-pei-zhi.html" target="_blank">
-                <div class="row">
-                  <div class="col-sm-3">
-                    <div class="episode-thumbnail">
-                      <img class="img-fluid" src="//p2lg64wh6.bkt.clouddn.com/lecture-01-cover.png">
-                      <span class="episode-length">7:25</span>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <h3 style="margin-top:0px">
-                      [Go零基础编程入门教程-01] Go 安装和配置
-                    </h3>
-                    <div class="text-muted">
-                      <small>
-                        
-                        <strong>#1</strong>
-                        ·
-                        <span>2018-01-14</span>
-                      </small>
-                    </div>
-                      <div class="text-muted episode-description">
-                        1. Go 安装示例<br>2. GOPATH 配置示例<br>3. 编写第一个 Go 程序<br>4. 标准 Go 命令示范： go run, go build, go install<br>
-                      </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <hr>
-          
-
-          
-          <div class="text-center">
-            <nav>
-              <ul class="pagination">
-                
-                  <li class="page-item"><a class="page-link" rel="next" href="/episodes/page-1">←</a></li>
-                
-                
-                
-                  
-                    <li class="page-item"><a class="page-link" href="/episodes/page-1">1</a></li>
-                  
-                
-                  
-                    <li class="page-item active"><span class="page-link">2</span></li>
-                  
-                
-                
-                  <li class="page-item disabled"><span class="page-link">→</span></li>
-                
-               </ul>
-             </nav>
-           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card">
-        <div class="card-body">
-          <h5><strong>搜素</strong></h5>
-          <form class="episode_search" id="episode_search" action="/episodes" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
-            <div class="form-group">
-              <input placeholder="输入关键字...." class="form-control" type="search">
-            </div>
-            <input type="submit" name="commit" value="搜索" class="btn btn-outline-primary btn-block" data-disable-with="Search">
-          </form>
-          <hr>
-
-          <h5><strong>分类</strong></h5>
-          
-
-
-
-
-  <div><a class="text-default" href="/episodes/tagged/GOPATH.html">GOPATH</a></div>
-
-  <div><a class="text-default" href="/episodes/tagged/VSCode.html">VSCode</a></div>
-
-
-        </div>
-      </div>
+    <div class="episode-video-wrapper mb-5">
+  <div class="video-player">
+    <div class="embed-responsive embed-responsive-video">
+      <iframe class="embed-responsive-item" src="//v.qq.com/iframe/player.html?vid=s0536g5nge8&tiny=0&auto=0" frameborder="0" allowfullscreen="" width="100%" height="100%"></iframe>
     </div>
   </div>
 </div>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav" id="content-link__list">
+            </ul>
+            <hr>
+            <h5 class="text-muted">观看最新视频</h5>
+            
+            
+              
+                <a class="next-episode-card" href=/episodes/slice>
+                  <img class="img-fluid" src=//p2lg64wh6.bkt.clouddn.com/lecture-06-cover.png>
+                  <small>切片</small>
+                </a>
+              
+            
+              
+                <a class="next-episode-card" href=/episodes/shu-zu>
+                  <img class="img-fluid" src=//p2lg64wh6.bkt.clouddn.com/lecture-05-cover.png>
+                  <small>数组</small>
+                </a>
+              
+            
+          </div>
+        </div>
 
+        <div class="col-md-10">
+          <div class="card">
+            <div class="card-body episode-body">
+              <h2>基础数据类型</h2>
+              <p class="lead">学习了解 Go 基础数据类型，掌握 bool, 数字，字符串类型的使用。</p>
+              <hr>
+              <div class="content-link__container jsAppModule" data-target="#content-link__list" data-module="ContentLink">
+                <p>Go 语言中的基本数据类型包含：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bool	  the set of boolean (true, false)
+
+uint8	  the set of all unsigned  8-bit integers (0 to 255)
+uint16	  the set of all unsigned 16-bit integers (0 to 65535)
+uint32	  the set of all unsigned 32-bit integers (0 to 4294967295)
+uint64	  the set of all unsigned 64-bit integers (0 to 18446744073709551615)
+
+int8	  the set of all signed  8-bit integers (-128 to 127)
+int16	  the set of all signed 16-bit integers (-32768 to 32767)
+int32	  the set of all signed 32-bit integers (-2147483648 to 2147483647)
+int64	  the set of all signed 64-bit integers (-9223372036854775808 to 9223372036854775807)
+
+float32	  the set of all IEEE-754 32-bit floating-point numbers
+float64	  the set of all IEEE-754 64-bit floating-point numbers
+
+complex64	  the set of all complex numbers with float32 real and imaginary parts
+complex128	  the set of all complex numbers with float64 real and imaginary parts
+
+byte	  alias for uint8
+rune	  alias for int32
+uint	  either 32 or 64 bits
+int	  same size as uint
+uintptr	  an unsigned integer large enough to store the uninterpreted bits of a pointer value
+
+string	  the set of string value (eg: "hi")
+</code></pre></div></div>
+
+<p>我们可以将基本类型分为三大类：</p>
+
+<ul>
+  <li>布尔类型</li>
+  <li>数字类型</li>
+  <li>字符串类型</li>
+</ul>
+
+<h3 id="布尔类型">布尔类型</h3>
+
+<p>一般我们用于判断条件, 它的取值范围为 <code class="highlighter-rouge">true</code>, <code class="highlighter-rouge">false</code>, 声明如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var a bool
+var a = true
+a := true
+
+const a = true
+</code></pre></div></div>
+
+<h3 id="数字类型">数字类型：</h3>
+
+<p>数字类型主要分为有符号数和无符号数，有符号数可以用来表示负数，除此之外它们还有位数的区别，不同的位数代表它们实际存储占用空间，以及取值的范围。</p>
+
+<p>例如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var (
+  a uint8 = 1
+  b int8 = 1
+)
+
+var (
+    c int = 64
+)
+</code></pre></div></div>
+
+<p>注意：</p>
+
+<ul>
+  <li>每种数字类型都有取值范围，超过了取值范围，出现 <code class="highlighter-rouge">overflows</code> 的错误。</li>
+  <li>int，uint 的长度由操作系统的位数决定，在 32 位系统里面，它们的长度未 32 bit, 64 位系统，长度为 64 bit。</li>
+</ul>
+
+<h3 id="字符串">字符串</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var a = "hello" //单行字符串
+var c = "\"" // 转义符
+
+var b = `hello` //原样输出
+var d = `line3  //多行输出
+line1
+line2
+`
+
+var str = "hello, 世界"
+
+b := str[0]  //b is a uint8 type, like byte
+fmt.Println(b)  // 104
+fmt.Println(string(b)) // h
+
+fmt.Println(len(str)) //12, 查看字符串有多少个字节
+fmt.Println(len([]rune(str))) // 8 查看有多少个字符
+</code></pre></div></div>
+
+<h3 id="特殊类型">特殊类型</h3>
+
+<ul>
+  <li>byte，uint8 别名，用于表示二进制数据的 bytes</li>
+  <li>rune，int32 别名, 用于表示一个符号</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var str = "hello, 世界"
+
+for _, char := range str {
+  fmt.Printf("%T", char)
+}
+</code></pre></div></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer role="contentinfo">
   <div class="container mt-5">
     <div class="row">
