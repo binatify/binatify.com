@@ -71,7 +71,7 @@
     <div class="episode-video-wrapper mb-5">
   <div class="video-player">
     <div class="embed-responsive embed-responsive-video">
-      <iframe class="embed-responsive-item" src="//v.qq.com/iframe/player.html?vid=s0536g5nge8&tiny=0&auto=0" frameborder="0" allowfullscreen="" width="100%" height="100%"></iframe>
+      <iframe class="embed-responsive-item" src="//v.qq.com/iframe/player.html?vid=y0540mfaoz0&tiny=0&auto=0" frameborder="0" allowfullscreen="" width="100%" height="100%"></iframe>
     </div>
   </div>
 </div>
@@ -94,11 +94,6 @@
               
             
               
-                <a class="next-episode-card" href=/episodes/map-xue-xi-he-shi-yong>
-                  <img class="img-fluid" src=//p2lg64wh6.bkt.clouddn.com/lecture-07-cover.png>
-                  <small>map 学习和使用</small>
-                </a>
-              
             
           </div>
         </div>
@@ -106,114 +101,143 @@
         <div class="col-md-10">
           <div class="card">
             <div class="card-body episode-body">
-              <h2>基础数据类型</h2>
-              <p class="lead">学习了解 Go 基础数据类型，掌握 bool, 数字，字符串类型的使用。</p>
+              <h2>map 学习和使用</h2>
+              <p class="lead">学习 Go Map 的概览和基础使用方式</p>
               <hr>
               <div class="content-link__container jsAppModule" data-target="#content-link__list" data-module="ContentLink">
-                <p>Go 语言中的基本数据类型包含：</p>
+                <p>在 Go 语言里面，map 一种无序的键值对, 它是数据结构 hash 表的一种实现方式，类似 Python 中的字典。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bool	  the set of boolean (true, false)
+<h3 id="语法">语法</h3>
 
-uint8	  the set of all unsigned  8-bit integers (0 to 255)
-uint16	  the set of all unsigned 16-bit integers (0 to 65535)
-uint32	  the set of all unsigned 32-bit integers (0 to 4294967295)
-uint64	  the set of all unsigned 64-bit integers (0 to 18446744073709551615)
+<p>使用关键字 map 来声明形如：</p>
 
-int8	  the set of all signed  8-bit integers (-128 to 127)
-int16	  the set of all signed 16-bit integers (-32768 to 32767)
-int32	  the set of all signed 32-bit integers (-2147483648 to 2147483647)
-int64	  the set of all signed 64-bit integers (-9223372036854775808 to 9223372036854775807)
-
-float32	  the set of all IEEE-754 32-bit floating-point numbers
-float64	  the set of all IEEE-754 64-bit floating-point numbers
-
-complex64	  the set of all complex numbers with float32 real and imaginary parts
-complex128	  the set of all complex numbers with float64 real and imaginary parts
-
-byte	  alias for uint8
-rune	  alias for int32
-uint	  either 32 or 64 bits
-int	  same size as uint
-uintptr	  an unsigned integer large enough to store the uninterpreted bits of a pointer value
-
-string	  the set of string value (eg: "hi")
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>map[KeyType]ValueType
 </code></pre></div></div>
 
-<p>我们可以将基本类型分为三大类：</p>
+<p>注意点：</p>
 
 <ul>
-  <li>布尔类型</li>
-  <li>数字类型</li>
-  <li>字符串类型</li>
+  <li>必须指定 key, value 的类型，插入的纪录类型必须匹配。</li>
+  <li>key 具有唯一性，插入纪录的 key 不能重复。</li>
+  <li>KeyType 可以为基础数据类型（例如 bool, 数字类型，字符串）, 不能为数组，切片，map，它的取值必须是能够使用 <code class="highlighter-rouge">==</code> 进行比较。</li>
+  <li>ValueType 可以为任意类型。</li>
+  <li>无序性。</li>
+  <li>线程不安全, 一个 goroutine 在对 map 进行写的时候，另外的 goroutine 不能进行读和写操作，Go 1.6 版本以后会抛出 runtime 错误信息。</li>
 </ul>
 
-<h3 id="布尔类型">布尔类型</h3>
-
-<p>一般我们用于判断条件, 它的取值范围为 <code class="highlighter-rouge">true</code>, <code class="highlighter-rouge">false</code>, 声明如下：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var a bool
-var a = true
-a := true
-
-const a = true
-</code></pre></div></div>
-
-<h3 id="数字类型">数字类型：</h3>
-
-<p>数字类型主要分为有符号数和无符号数，有符号数可以用来表示负数，除此之外它们还有位数的区别，不同的位数代表它们实际存储占用空间，以及取值的范围。</p>
-
-<p>例如：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var (
-  a uint8 = 1
-  b int8 = 1
-)
-
-var (
-    c int = 64
-)
-</code></pre></div></div>
-
-<p>注意：</p>
+<h3 id="声明和初始化">声明和初始化</h3>
 
 <ul>
-  <li>每种数字类型都有取值范围，超过了取值范围，出现 <code class="highlighter-rouge">overflows</code> 的错误。</li>
-  <li>int，uint 的长度由操作系统的位数决定，在 32 位系统里面，它们的长度未 32 bit, 64 位系统，长度为 64 bit。</li>
+  <li>使用 var 声明</li>
 </ul>
 
-<h3 id="字符串">字符串</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var a = "hello" //单行字符串
-var c = "\"" // 转义符
-
-var b = `hello` //原样输出
-var d = `line3  //多行输出
-line1
-line2
-`
-
-var str = "hello, 世界"
-
-b := str[0]  //b is a uint8 type, like byte
-fmt.Println(b)  // 104
-fmt.Println(string(b)) // h
-
-fmt.Println(len(str)) //12, 查看字符串有多少个字节
-fmt.Println(len([]rune(str))) // 8 查看有多少个字符
-</code></pre></div></div>
-
-<h3 id="特殊类型">特殊类型</h3>
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span><span class="x"> </span><span class="n">cMap</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="x">  </span><span class="c">// 只定义, 此时 cMap 为 nil</span><span class="x">
+</span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">cMap</span><span class="x"> </span><span class="o">==</span><span class="x"> </span><span class="no">nil</span><span class="p">)</span><span class="x">
+</span><span class="n">cMap</span><span class="p">[</span><span class="s">"北京"</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="m">1</span><span class="x">  </span><span class="c">// 报错，因为 cMap 为 nil</span><span class="x">
+</span></code></pre></div></div>
 
 <ul>
-  <li>byte，uint8 别名，用于表示二进制数据的 bytes</li>
-  <li>rune，int32 别名, 用于表示一个符号</li>
+  <li>使用 <code class="highlighter-rouge">make</code></li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var str = "hello, 世界"
+<div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cMap</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="nb">make</span><span class="p">(</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">)</span><span class="x">
+</span><span class="n">cMap</span><span class="p">[</span><span class="s">"北京"</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="m">1</span><span class="x">
 
-for _, char := range str {
-  fmt.Printf("%T", char)
+</span><span class="c">// 指定初始容量</span><span class="x">
+</span><span class="n">cMap</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="nb">make</span><span class="p">(</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">,</span><span class="x"> </span><span class="m">100</span><span class="p">)</span><span class="x">
+</span><span class="n">cMap</span><span class="p">[</span><span class="s">"北京"</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="m">1</span><span class="x">
+</span></code></pre></div></div>
+
+<p>说明：在使用 make 初始化 map 的时候，可以指定初始容量，这在能预估 map key 数量的情况下，减少动态分配的次数，从而提升性能。</p>
+
+<ul>
+  <li>简短声明方式</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cMap := map[string]int{"北京": 1}
+</code></pre></div></div>
+
+<h3 id="map-基本操作">map 基本操作</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cMap := map[string]int{}
+
+cMap["北京"] = 1 //写
+
+code := cMap["北京"] // 读
+fmt.Println(code)
+
+code = cMap["广州"]  // 读不存在 key
+fmt.Println(code)
+
+code, ok = cMap["广州"]  // 检查 key 是否存在
+if ok {
+  fmt.Println(code)  
+} else {
+  fmt.Println("key not exist")  
 }
+
+delete(cMap, "北京") // 删除 key
+fmt.Println("北京")
+</code></pre></div></div>
+
+<h3 id="循环和无序性">循环和无序性</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cMap := map[string]int{"北京": 1, "上海": 2, "广州": 3, "深圳": 4}
+
+for city, code := range cMap {
+  fmt.Printf("%s:%d", city, code)
+  fmt.Println()
+}
+</code></pre></div></div>
+
+<h3 id="线程不安全">线程不安全</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cMap := make(map[string]int)
+
+var wg sync.WaitGroup
+wg.Add(2)
+
+go func() {
+	cMap["北京"] = 1
+	wg.Done()
+}()
+
+go func() {
+	cMap["上海"] = 2
+	wg.Done()
+}()
+
+wg.Wait()
+</code></pre></div></div>
+
+<p>在 Go 1.6 之后的版本，多次运行此段代码，你将遇到这样的错误信息：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fatal error: concurrent map writes
+
+goroutine x [running]:
+runtime.throw(0x10c64b6, 0x15)
+.....
+</code></pre></div></div>
+
+<p>解决之道：</p>
+
+<ul>
+  <li>对读写操作加锁</li>
+  <li>使用 security map, 例如 <code class="highlighter-rouge">sync.map</code></li>
+</ul>
+
+<h3 id="map-嵌套">map 嵌套</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>provinces := make(map[string]map[string]int)
+
+provinces["北京"] = map[string]int{
+  "东城区": 1,
+  "西城区": 2,
+  "朝阳区": 3,
+  "海淀区": 4,
+}
+
+fmt.Println(provinces["北京"])
 </code></pre></div></div>
 
               </div>
