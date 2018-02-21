@@ -10,9 +10,9 @@ description: 学习了解 Go 切片定义，掌握切片的基本使用。
 preview: '1. 介绍 Go 切片的概念。<br>2.初始化方式、长度、容量以及使用中需要注意的点。'
 datetime: 2018-01-25
 time: "14:18"
-isnew: true
+isnew: false
 comments: true
-taglist:
+taglist: 
 ---
 
 ### 切片组成要素
