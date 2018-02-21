@@ -10,8 +10,7 @@ description: "函数是语句序列的集合，能够将一个大的工作分解
 preview: "Go 函数的定义以及常见使用方式等"
 datetime: 2018-01-28
 time: "15:29"
-isnew: true
-comments: true
+isnew: false
 taglist:
 ---
 
